@@ -14,7 +14,7 @@ class Box:
         else: # Multiple Lines
             self.Box.append('╭' + '─' * (self.Longest + 2) + '╮')
             for Line in self.Text:
-                if Line == '<Sep>':
+                if '<sep>' in Line.lower():
                     self.Box.append('├' + '─' * (self.Longest + 2) + '┤')
                 else:
                     self.Box.append('│ ' + Line + ' ' * (self.Longest - len(Line)) + ' │')
